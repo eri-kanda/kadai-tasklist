@@ -1,0 +1,13 @@
+<div class="row">
+  <aside class="col-sm-4">
+    <div>
+      <h3><%= @user.name %></h3>
+    </div>
+    <div>
+      <img src="<%= gravatar_url(@user, { size: 200 }) %>" alt="">
+    </div>
+  </aside>
+  <div>
+    <a href="#">Tasklist</a>
+  </div>
+</div>

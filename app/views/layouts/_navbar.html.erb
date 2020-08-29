@@ -1,9 +1,12 @@
-<header class="mb-4">
+<header>
   <a href="/">Tasklist</a>
-    
-  <div>
+  
+  <% if logged_in? %>
+    <%= current_user.name %>
+    <%= link_to 'Logout', logout_path, method: :delete %>
+  <% else %>
     <%= link_to 'Signup', signup_path %>
-    <a href="#">Login</a>
-  </div>
+    <%= link_to 'Login', login_path %>
+  <% end %>
   
 </header>
